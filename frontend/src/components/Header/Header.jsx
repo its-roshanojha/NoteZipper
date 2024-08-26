@@ -5,13 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 const header = () => {
   return (
     <>
        <Navbar expand="lg" className="bg-dark" variant='dark'>
       <Container>
-        <Navbar.Brand href="#">Node Zipper</Navbar.Brand>
+        <Navbar.Brand href="#"><Link to={"/"} style={{color : "white", textDecoration: "none"}}>Node Zipper</Link></Navbar.Brand>
         <Form className="d-flex">
             <Form.Control
               type="search"
@@ -29,7 +30,7 @@ const header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">My Notes</Nav.Link>
+            <Nav.Link href="#action1"><Link to={"/mynotes"} style={{color : "white", textDecoration: "none"}}>My Notes</Link></Nav.Link>
             <NavDropdown title="User-Name" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action4">
                  My Profile
